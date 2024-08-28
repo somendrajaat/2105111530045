@@ -18,6 +18,26 @@ import java.util.Optional;
 
 @org.springframework.stereotype.Service
 public class Service {
+     @Value("${auth.url}")
+    private String authUrl;
+
+    @Value("${auth.companyName}")
+    private String companyName;
+
+    @Value("${auth.clientID}")
+    private String clientID;
+
+    @Value("${auth.clientSecret}")
+    private String clientSecret;
+
+    @Value("${auth.ownerName}")
+    private String ownerName;
+
+    @Value("${auth.ownerEmail}")
+    private String ownerEmail;
+
+    @Value("${auth.rollNo}")
+    private String rollNo;
 
     public Response getResponse(char c) {
         Response res=getOperations(c);
