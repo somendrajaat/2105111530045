@@ -37,14 +37,14 @@ public class Service {
             HttpHeaders headers = new HttpHeaders();
             headers.set("Content-Type", "application/json");
 
-            String requestBody = "{\n" +
-                    "    \"companyName\": \"glbajajgroup\",\n" +
-                    "    \"clientID\": \"e334b8ee-cadf-40e9-9168-d0491060c32c\",\n" +
-                    "    \"clientSecret\": \"kyJEjgMvwhPbKYZl\",\n" +
-                    "    \"ownerName\": \"Somendra\",\n" +
-                    "    \"ownerEmail\": \"somendra.singh2021@glbajajgroup.org\",\n" +
-                    "    \"rollNo\": \"2105111530045\"\n" +
-                    "}";
+            String requestBody = String.format("{\n" +
+                "    \"companyName\": \"%s\",\n" +
+                "    \"clientID\": \"%s\",\n" +
+                "    \"clientSecret\": \"%s\",\n" +
+                "    \"ownerName\": \"%s\",\n" +
+                "    \"ownerEmail\": \"%s\",\n" +
+                "    \"rollNo\": \"%s\"\n" +
+                "}", companyName, clientID, clientSecret, ownerName, ownerEmail, rollNo);
 
             HttpEntity<String> entity = new HttpEntity<>(requestBody, headers);
 
